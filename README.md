@@ -8,7 +8,7 @@ You will be invited to a private fork of this repo. Please write your code in a 
 
 ## Getting Started
 
-It is recommended that you complete this using a Linux or MacOS environment.
+It is recommended that you complete this using a Linux or MacOS environment. While you can use any development environment you like, XCode (MacOS only) or VSCode using the [Swift extension](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang) seem to have the best Swift support.
 
 1. [Install a Swift toolchain](https://www.swift.org/install/)
 1. Clone this repository
