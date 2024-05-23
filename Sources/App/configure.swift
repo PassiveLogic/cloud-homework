@@ -2,6 +2,7 @@ import NIOSSL
 import Fluent
 import FluentPostgresDriver
 import Leaf
+import Pioneer
 import Vapor
 
 // configures your application
@@ -18,11 +19,25 @@ public func configure(_ app: Application) async throws {
         tls: .prefer(try .init(configuration: .clientDefault)))
     ), as: .psql)
 
-    app.migrations.add(CreateTodo())
+    app.migrations.add(CreateTodoMigration())
 
     app.views.use(.leaf)
 
-
+    let graphqlServer = try Pioneer(
+        schema: graphqlSchema(),
+        resolver: Resolver(),
+        introspection: true,
+        playground: .graphiql
+    )
+    app.middleware.use(
+        graphqlServer.vaporMiddleware(
+            at: "graphql",
+            context: { request, response in
+                Context(db: request.db)
+            }
+        )
+    )
+    
     // register routes
     try routes(app)
 }
