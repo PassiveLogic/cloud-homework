@@ -12,7 +12,7 @@ It is recommended that you complete this using a Linux or MacOS environment.
 
 1. [Install a Swift toolchain](https://www.swift.org/install/)
 1. Clone this repository
-1. Start the dependencies: `docker compose up -d`
+1. Start the database: `docker compose up db -d`
 1. Build the package: `swift build`
 1. Run the migration: `swift run App migrate`
 1. Run the executable: `swift run App serve --hostname 0.0.0.0 --port 8080`
