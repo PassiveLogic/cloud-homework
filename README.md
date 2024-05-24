@@ -1,6 +1,6 @@
 # PassiveLogic Cloud Take Home Assignment
 
-This repository contains a basic Vapor GraphQL API project. It contains a Vapor server that presents a small GraphQL API for managing todo-list items, backed by a PostgreSQL database.
+This assignment involves creating the backend for a Todo list application. The provided repository serves as a starting point, and your task is to add several new features. It includes a Vapor server and a small GraphQL API for managing todo list items, all supported by a PostgreSQL database.
 
 You will be invited to a private fork of this repo. Please create a branch, complete the objectives below, and add a document at the repo root explaining what you've done. Feel free to list any assumptions, reasoning, or architecture in that document. When you're finished, create a pull request.
 
@@ -17,7 +17,6 @@ It is recommended that you complete this using a Linux or MacOS environment. Whi
 1. Set up the database: `swift run App migrate`
 1. Run the server: `swift run App serve --hostname 0.0.0.0 --port 8080`
 1. Visit the GraphiQL page: http://localhost:8080/graphql
-
 
 ## Objectives
 
