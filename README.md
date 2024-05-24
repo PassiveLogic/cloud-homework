@@ -1,6 +1,6 @@
 # PassiveLogic Cloud Take Home Assignment
 
-This repository contains a basic Vapor GraphQL API project.
+This repository contains a basic Vapor GraphQL API project. It contains a Vapor server that presents a small GraphQL API for managing todo-list items, backed by a PostgreSQL database.
 
 You will be invited to a private fork of this repo. Please create a branch, complete the objectives below, and add a document at the repo root explaining what you've done. Feel free to list any assumptions, reasoning, or architecture in that document. When you're finished, create a pull request.
 
@@ -8,7 +8,7 @@ You will be invited to a private fork of this repo. Please create a branch, comp
 
 ## Getting Started
 
-It is recommended that you complete this using a Linux or MacOS environment. While you can use any development environment you like, XCode (MacOS only) or VSCode using the [Swift extension](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang) seem to have the best Swift support.
+It is recommended that you complete this using a Linux or MacOS environment. While you can use any development environment you like, XCode (MacOS only) or VSCode using the [Swift extension](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang) generally have the best Swift support.
 
 1. [Install a Swift toolchain](https://www.swift.org/install/)
 1. Clone this repository
@@ -32,7 +32,7 @@ It is recommended that you complete this using a Linux or MacOS environment. Whi
     - Todo lists should have an `id` and `name` field
     - Add this type via a migration
     - Add Todo list queries and mutations to GraphQL
-    - Add the ability to get all
+    - Add the ability to get all todo items for a given list through a GraphQL object traversal
 
 ## Resources
 
