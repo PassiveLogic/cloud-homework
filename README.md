@@ -10,9 +10,11 @@ You will be invited to a private fork of this repo. Please create a branch, comp
 
 It is recommended that you complete this using a Linux or MacOS environment. While you can use any development environment you like, XCode (MacOS only) or VSCode using the [Swift extension](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang) generally have the best Swift support.
 
-1. [Install a Swift toolchain](https://www.swift.org/install/)
+> If you only have access to a Windows environment, you can use a VSCode [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) to complete the assignment. To get set up, install the [Dev Containers VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers), go to the `Remote Explorer` menu, and click `Start in Dev Container`. This will start up a Docker image with the Swift toolchain and a running database.
+
 1. Clone this repository
-1. Start the database: `docker compose up db -d`
+1. [Install a Swift toolchain](https://www.swift.org/install/) (skip if using VSCode Dev Container)
+1. Start the database (skip if using VSCode Dev Container): `docker compose up db -d`
 1. Build the package: `swift build`
 1. Set up the database: `swift run App migrate`
 1. Run the server: `swift run App serve --hostname 0.0.0.0 --port 8080`
