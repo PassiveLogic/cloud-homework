@@ -12,6 +12,7 @@ It is recommended that you complete this using a Linux or MacOS environment. Whi
 
 > If you only have access to a Windows environment, you can use a VSCode [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) to complete the assignment. To get set up, install the [Dev Containers VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers), go to the `Remote Explorer` menu, and click `Start in Dev Container`. This will start up a Docker image with the Swift toolchain and a running database.
 
+1. Ensure you have [Docker installed](https://www.docker.com/products/docker-desktop/)
 1. Clone this repository
 1. [Install a Swift toolchain](https://www.swift.org/install/) (skip if using VSCode Dev Container)
 1. Start the database (skip if using VSCode Dev Container): `docker compose up db -d`
