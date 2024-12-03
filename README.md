@@ -23,17 +23,17 @@ It is recommended that you complete this using a Linux or MacOS environment. Whi
 
 ## Objectives
 
-1. Allow Todo items to be completed.
+1. Allow Todo items to be completed
     - Completion and uncompletion state should be controlled by separate mutations (not `updateTodo`)
-    - Newly created items must always be uncompleted
+    - Newly created items should always be uncompleted
     - The `todos` query should allow filtering for completed or uncompleted items
-3. Add pagination to the `todos` query.
+2. Add pagination to the `todos` query
     - Include a "page number" and a "number of items per page" arguments
-    - Add a query that returns the total number of todo items.
-2. Add a `TodoList` type that collects multiple Todo items.
-    - Todo lists should have an `id` and `name` field
-    - Add this type via a migration
-    - Add Todo list queries and mutations to GraphQL
+    - Add a query that returns the total number of todo items
+3. Add a `TodoList` type that collects multiple Todo items
+    - Todo lists should be able to be created, queried, updated, and deleted
+    - All Todo items should belong to a list
+    - Todo items should only belong to one list at a time, but may be moved from list to list
     - Add the ability to get all todo items for a given list through a GraphQL object traversal
 
 ## Resources
