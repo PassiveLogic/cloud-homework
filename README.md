@@ -25,11 +25,9 @@ It is recommended that you complete this using a Linux or MacOS environment. Whi
 
 1. Allow Todo items to be completed
     - Completion and uncompletion state should be controlled by separate mutations (not `updateTodo`)
-    - Newly created items should always be uncompleted
     - The `todos` query should allow filtering for completed or uncompleted items
 2. Add pagination to the `todos` query
-    - Include a "page number" and a "number of items per page" arguments
-    - Add a query that returns the total number of todo items
+    - Also add a query that returns the total number of todo items
 3. Add a `TodoList` type that collects multiple Todo items
     - Todo lists should be able to be created, queried, updated, and deleted
     - All Todo items should belong to a list
