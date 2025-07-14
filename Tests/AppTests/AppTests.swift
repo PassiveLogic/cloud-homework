@@ -1,7 +1,7 @@
 @testable import App
 import XCTVapor
 import Fluent
-import GraphQL
+@preconcurrency import GraphQL
 
 final class AppTests: XCTestCase {
     var app: Application!
@@ -154,5 +154,3 @@ final class AppTests: XCTestCase {
         XCTAssertNil(todoOptional)
     }
 }
-
-extension GraphQLRequest: Content {}

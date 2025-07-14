@@ -1,5 +1,5 @@
 {
-  "originHash" : "acd275a81d2df8d833e5082c1721740c6a952a5ad3aeda4a3070465e2e61b2dd",
+  "originHash" : "b3d51b822ce0db4623d04c26917f2890aeccebe9d884a95884114303e4e1bd48",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -98,15 +98,6 @@
       "state" : {
         "revision" : "3498e60218e6003894ff95192d756e238c01f44e",
         "version" : "4.7.1"
-      }
-    },
-    {
-      "identity" : "pioneer",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/d-exclaimation/Pioneer.git",
-      "state" : {
-        "revision" : "210d7de4c76982e7ed0c4aa178ee467b84e36799",
-        "version" : "1.4.1"
       }
     },
     {
