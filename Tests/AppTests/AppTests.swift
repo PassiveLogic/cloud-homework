@@ -5,19 +5,19 @@ import Fluent
 
 final class AppTests: XCTestCase {
     var app: Application!
-    
+
     override func setUp() async throws {
         self.app = try await Application.make(.testing)
         try await configure(app)
         try await app.autoMigrate()
     }
-    
-    override func tearDown() async throws { 
+
+    override func tearDown() async throws {
         try await app.autoRevert()
         try await self.app.asyncShutdown()
         self.app = nil
     }
-    
+
     func testHelloWorld() async throws {
         try await self.app.test(.GET, "hello", afterResponse: { res async in
             XCTAssertEqual(res.status, .ok)
@@ -79,12 +79,12 @@ final class AppTests: XCTestCase {
             let idString = try XCTUnwrap(result.data?["createTodo"].dictionary?["id"]?.string)
             id = try XCTUnwrap(UUID(uuidString: idString))
         })
-        
+
         let todoOptional = try await Todo.find(XCTUnwrap(id), on: app.db)
         let todo = try XCTUnwrap(todoOptional)
         XCTAssertEqual(todo.title, "test1")
     }
-    
+
     func testGraphQLUpdateTodo() async throws {
         let todo = Todo(title: "test1")
         try await todo.create(on: app.db)
@@ -117,7 +117,7 @@ final class AppTests: XCTestCase {
             )
         })
     }
-    
+
     func testGraphQLDeleteTodo() async throws {
         let todo = Todo(title: "test1")
         try await todo.create(on: app.db)
@@ -149,7 +149,7 @@ final class AppTests: XCTestCase {
                 )
             )
         })
-        
+
         let todoOptional = try await Todo.find(XCTUnwrap(todo.id), on: app.db)
         XCTAssertNil(todoOptional)
     }
