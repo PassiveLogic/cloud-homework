@@ -1,5 +1,5 @@
 # Docker Compose file for use in VSCode Dev Containers
-# 
+#
 # Learn more: https://code.visualstudio.com/docs/devcontainers/containers
 version: '3.7'
 
@@ -12,10 +12,10 @@ x-shared_environment: &shared_environment
   DATABASE_NAME: vapor_database
   DATABASE_USERNAME: vapor_username
   DATABASE_PASSWORD: vapor_password
-  
+
 services:
   dev:
-    image: swift:5.10
+    image: swift:6.1
     volumes:
       - ..:/workspace:cached
     environment:
