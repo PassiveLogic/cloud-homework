@@ -69,8 +69,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/GraphQLSwift/Graphiti.git",
       "state" : {
-        "revision" : "046675b084c382b2401ac7e31455a4dc610655d4",
-        "version" : "1.15.2"
+        "revision" : "a23a3d232df202fc158ad2d698926325b470523c",
+        "version" : "3.0.0"
       }
     },
     {

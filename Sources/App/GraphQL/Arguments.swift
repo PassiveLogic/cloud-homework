@@ -1,15 +1,15 @@
 import Foundation
 
-struct CreateTodo: Codable {
+struct CreateTodo: Codable, Sendable {
     let id: UUID?
     let title: String
 }
 
-struct UpdateTodo: Codable {
+struct UpdateTodo: Codable, Sendable {
     let id: UUID
     let title: String?
 }
 
-struct DeleteTodo: Codable {
+struct DeleteTodo: Codable, Sendable {
     let id: UUID
 }

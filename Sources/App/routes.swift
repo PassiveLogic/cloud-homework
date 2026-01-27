@@ -1,6 +1,6 @@
 import Fluent
-@preconcurrency import GraphQL
-@preconcurrency import Graphiti
+import GraphQL
+import Graphiti
 import Vapor
 
 func routes(_ app: Application) throws {
@@ -24,12 +24,11 @@ func routes(_ app: Application) throws {
             request: graphqlRequest.query,
             resolver: Resolver(),
             context: .init(db: req.db),
-            eventLoopGroup: req.eventLoop,
             variables: graphqlRequest.variables,
             operationName: graphqlRequest.operationName
-        ).get()
+        )
     }
 }
 
-extension GraphQLRequest: @retroactive Content, @unchecked Sendable {}
-extension GraphQLResult: @retroactive Content, @unchecked Sendable {}
+extension GraphQLRequest: @retroactive Content {}
+extension GraphQLResult: @retroactive Content {}
