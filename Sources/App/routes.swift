@@ -1,6 +1,7 @@
 import Fluent
 import GraphQL
 import Graphiti
+import GraphQLVapor
 import Vapor
 
 func routes(_ app: Application) throws {
@@ -13,22 +14,12 @@ func routes(_ app: Application) throws {
         "Hello, world!"
     }
 
-    app.get("graphql") { req in
-        return try await req.view.render("graphiql")
-    }
-
     let graphqlSchema = try graphqlSchema()
-    app.post("graphql") { req in
-        let graphqlRequest = try req.content.decode(GraphQLRequest.self)
-        return try await graphqlSchema.execute(
-            request: graphqlRequest.query,
-            resolver: Resolver(),
-            context: .init(db: req.db),
-            variables: graphqlRequest.variables,
-            operationName: graphqlRequest.operationName
-        )
+    app.graphql(
+        schema: graphqlSchema.schema,
+        rootValue: Resolver(),
+        config: .init(allowMissingAcceptHeader: true)
+    ) { req in
+        Context(db: req.db)
     }
 }
-
-extension GraphQLRequest: @retroactive Content {}
-extension GraphQLResult: @retroactive Content {}
