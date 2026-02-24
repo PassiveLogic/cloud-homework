@@ -19,7 +19,7 @@ func routes(_ app: Application) throws {
         schema: graphqlSchema.schema,
         rootValue: Resolver(),
         config: .init(allowMissingAcceptHeader: true)
-    ) { req in
-        Context(db: req.db)
+    ) { inputs in
+        Context(db: inputs.vaporRequest.db)
     }
 }

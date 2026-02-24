@@ -21,8 +21,8 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-nio.git", from: "2.65.0"),
         // GraphQL & swift definition sugar
         .package(url: "https://github.com/GraphQLSwift/Graphiti.git", from: "3.0.0"),
-        // GraphQL & Vapor bindings
-        .package(url: "https://github.com/GraphQLSwift/graphql-vapor.git", from: "0.1.0"),
+        // GraphQL vapor integration
+        .package(url: "https://github.com/GraphQLSwift/graphql-vapor.git", from: "1.0.0"),
     ],
     targets: [
         .executableTarget(
